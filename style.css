@@ -31,6 +31,7 @@ body {
   height: 20px;
   width: auto;
   cursor: pointer;
+  z-index: 999;
 }
 
 .Indice {
@@ -155,6 +156,13 @@ body {
   background-color: var(--color-rosa);
   border-width: 0ch;
   margin-right: 10px;
+  transition: 0.2s;
+  cursor:pointer;
+}
+#btn1:hover{
+  transition: 0.2s;
+  height: 15px;
+  width: 45px;
 }
 
 #btn2 {
@@ -162,6 +170,14 @@ body {
   width: 40px;
   background-color: var(--color-gris);
   border-width: 0ch;
+  transition: 0.2s;
+  cursor: pointer;
+}
+#btn2:hover{
+  transition: 0.2s;
+  height: 15px;
+  width: 45px;
+  margin-top: -20%;
 }
 
 .Shirt img {
@@ -237,6 +253,9 @@ body {
 
 .Bottle #btn1 {
   margin-top: 8%;
+}
+.Bottle #btn1:hover{
+  margin-top: 6%;
 }
 
 .Bottle .line {
@@ -321,22 +340,24 @@ body {
   transform: scaleX(-1);
 }
 
-.ContactUs {
+#ContactUs {
   writing-mode: vertical-lr;
   margin-left: 2px;
   margin-top: 3%;
   margin-block-end: -1%;
   display: flex;
   cursor: pointer;
-
+}
+#ContactUs :hover{
+  font-size: 20%;
 }
 
-.ContactUs p {
+#ContactUs p {
   font-size: large;
   margin-top: 25px;
 }
 
-.ContactUs .line {
+#ContactUs .line {
   transform: rotate(90deg);
   background-color: var(--color-rosa);
   margin-left: 0px;
@@ -348,15 +369,15 @@ body {
   justify-content: space-between;
 }
 
-.Hamburguer {
+#Hamburguer {
   margin-top: 30px;
   cursor: pointer;
 }
 
-.Hamburguer .line {
+#Hamburguer .line {
   background-color: var(--color-gris);
   width: 35px;
-  margin-top: 20%;
+  margin-top: 30%;
   height: 2px;
 }
 
@@ -496,6 +517,10 @@ body {
     margin-right: -10%;
   }
 
+  .Bottle #btn1:hover{
+    margin-top: 8%;
+  }
+
   .Bottle .line {
     margin-top: 110%;
     margin-left: 0%;
@@ -565,11 +590,41 @@ body {
   #arrow {
     font-size: 40px;
   }
-
 }
 
 @media (min-width: 600px) {
-  .Hamburguer {
+  #Hamburguer {
+    display: none;
+  }
+  #MenuMob{
     display: none;
   }
 }
+
+#MenuMob{
+  text-align: end;
+  font-size: 80px;
+  line-height: 200%;
+  background-color: #212222f3;
+  color: rgba(255, 255, 255, 0.813);
+  padding: 30%;
+  margin-top: -500%;
+  margin-bottom: -10%;
+  position: absolute;
+  z-index: 500;
+}
+#MenuMob ul{
+  margin-top: 0%;
+}
+#MenuMob li{
+  cursor:pointer;
+}
+
+#MenuMob li:hover{
+color: rgb(255, 255, 255);
+}
+#close{
+  cursor:pointer;
+  font-size: 70px;
+}
+
